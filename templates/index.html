@@ -1,0 +1,17 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %} Secrets {% endblock %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1>Welcome</h1>
+		<p>Are you ready to discover my secret?</p>
+		<a href=" {{ url_for('login') }} "><button class="btn btn-primary btn-lg"> Login</button></a>
+	</div>
+{% endblock %}
+
+<!--style="text-align:center; padding-top: 30%;"-->
